@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Add Enquiry</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Spring Boot</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+
+		<form th:action="@{/enquiry-add}" th:object="${SalesOppr}" method="post">
+		<input type="text" th:field="*{CustomerName}" placeholder="Customer Name"/>
+		<input type="text" th:field="*{contactFname}" placeholder="First Name"/>
+		<input type="text" th:field="*{contactLname}" placeholder="Last Name"/>
+		<button type="submit" value="Submit" class="btn btn-success">Submit</button>
+		
+		</form>
+
+	</div>
+	<!-- /.container -->
+
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
